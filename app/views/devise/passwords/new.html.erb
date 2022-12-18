@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "sign.css" %>
+  </head>
+  <body>
+
+<div class="form-sign">
+
+  <%= image_tag "blood-bank.svg", width: 72, class: "mb-2" %>
+
+  <h1 class="h3 mb-4 fw-normal">Forgot your password?</h1>
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field form-floating mb-3">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "email-1 form-control" %>
+      <%= f.label :email %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Send a link to reset my password", class: "btn btn-lg" %>
+    </div>
+  <% end %>
+
+  <div class="links">
+    <%= render "devise/shared/links" %>
+  </div>
+
+</div>
+
+  </body>
+</html>

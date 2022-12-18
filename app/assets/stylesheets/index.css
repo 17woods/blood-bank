@@ -1,0 +1,19 @@
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  padding: 0;
+  background-color: #F0F7F4;
+  font-family: "Merriweather";
+}
+
+main {
+  height: 100vh;
+  height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.col {
+  height: -webkit-fill-available;
+}

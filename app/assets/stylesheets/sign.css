@@ -1,0 +1,73 @@
+html,
+body {
+height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background-color: #F0F7F4;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  padding-top: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.actions {
+  min-width: 100%;
+}
+
+.btn {
+  min-width: 100%;
+  background-color: #3066BE;
+  color: #F0F7F4;
+  font-weight: 600;
+}
+
+.email-0 {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-sign {
+  padding: 24px;
+  max-width: 360px;
+  width: 100%;
+  margin: auto;
+}
+
+.form-sign .form-floating:focus-within {
+  z-index: 2;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 2px;
+}
+
+.pass-0 {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+
+.pass-1 {
+  margin-bottom: 8px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-floating {
+  min-width: 100%;
+}

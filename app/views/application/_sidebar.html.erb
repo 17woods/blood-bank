@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "sidebar.css" %>
+  </head>
+  <body>
+
+<div class="sidebar flex-shrink-0 px-4 py-2">
+
+  <div class="row pt-2">
+    <%= link_to ((image_tag "blood-bank.svg", width: 48, class: "rounded-4") + "myBloodBank"), root_path, id: "root-anchor", class: "px-1 pb-3 mb-3 border-bottom border-light border-2" %>
+  </div>
+
+  <div class="row">
+    <ul class="list-unstyled ps-0">
+
+      <li class="mb-1">
+
+        <div class="collapse show" id="data-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+          </ul>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="btm_btns col border-end border-light py-3">
+      <%= link_to (image_tag "profile.svg", width: 36, class: "filter-white"), destroy_user_session_path, method: :delete %>
+    </div>
+    <div class="btm_btns col border-start border-light py-3">
+      <%= link_to (image_tag "logout.svg", width: 36, class: "filter-white"), edit_user_registration_path %>
+    </div>
+  </div>
+
+</div>
+
+  </body>
+</html>
