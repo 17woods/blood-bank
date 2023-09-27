@@ -1,28 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 
 
 - Auth
@@ -38,7 +15,7 @@ Things you may want to cover:
 
 
 - Scaffolds
-    - patients - Donors/Patients
-        - name:string sex:string dob:date age:integer abo-group:string rh-group:boolean address:string phone:string email:string notes:text
-    - products - Blood Products (type is one of ["rbcs", "plasma", "platelets"])
-        - type:string abo-group:string rh-group:boolean donor-id:integer collected:datetime expires:datetime spectest:text notes:text
+    - patients
+        - name:string surname:string sex:string dob:date age:integer height:integer weight:integer abo_group:string rh_group:string address:string phone:string email:string notes:text
+    - products - Blood Products (just blood bags)
+        - abo-group:string rh-group:boolean donor-id:integer collected:datetime expires:datetime spectest:text notes:text

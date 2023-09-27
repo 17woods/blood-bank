@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "patient_form.css" %>
+  </head>
+  <body>
+<div class="form-pat">
+
+  <%= image_tag "blood-bank.svg", width: 72, class: "mb-2" %>
+
+<%= form_with(model: patient) do |form| %>
+  <% if patient.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+        <% patient.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :name %>
+    <%= form.label :name, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.text_field :surname %>
+    <%= form.label :surname, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.text_field :sex %>
+    <%= form.label :sex, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.date_field :dob %>
+    <%= form.label :dob, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.number_field :age %>
+    <%= form.label :age, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.number_field :height %>
+    <%= form.label :height, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.number_field :weight %>
+    <%= form.label :weight, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.text_field :abo_group %>
+    <%= form.label :abo_group, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.text_field :rh_group %>
+    <%= form.label :rh_group, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.text_field :address %>
+    <%= form.label :address, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.text_field :phone %>
+    <%= form.label :phone, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.text_field :email %>
+    <%= form.label :email, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.text_area :notes %>
+    <%= form.label :notes, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.check_box :active %>
+    <%= form.label :active, style: "display: block" %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+</div>
+  </body>
+</html>

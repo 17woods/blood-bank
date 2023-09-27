@@ -1,0 +1,57 @@
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    padding: 0;
+    background-color: #F0F7F4;
+    font-family: "Merriweather";
+}
+
+main {
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+th {
+    background-color: #BD1E1E;
+    color: #F0F7F4;
+}
+
+td,
+th {
+    padding-left: 0.5em;
+    padding-right: 2em;
+}
+
+td a {
+    color: #32292F;
+}
+
+.button-container a {
+    max-width: 10em;
+}
+
+.side-bar {
+    max-width: 300px;
+}
+
+.btn {
+    min-width: 0%;
+    max-width: 20%;
+    background-color: #BD1E1E;
+    color: #F0F7F4;
+    font-weight: 600;
+}
+
+.col {
+    height: -webkit-fill-available;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5em;
+}
+

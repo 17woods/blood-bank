@@ -4,32 +4,45 @@
   </head>
   <body>
 
-<div class="sidebar flex-shrink-0 px-4 py-2">
+<div class="sidebar flex-shrink-0 px-4 py-2 border-end border-2 border-dark me-0">
 
   <div class="row pt-2">
     <%= link_to ((image_tag "blood-bank.svg", width: 48, class: "rounded-4") + "myBloodBank"), root_path, id: "root-anchor", class: "px-1 pb-3 mb-3 border-bottom border-light border-2" %>
   </div>
 
-  <div class="row">
-    <ul class="list-unstyled ps-0">
+  <div class="navigation row">
+    <ul class="nav nav-pills flex-column">
 
-      <li class="mb-1">
+      <li class="nav-item">
+        <a href="patients" class="nav-link active" id="pills-patients-tab" data-toggle="pill" role="tab" aria-controls="pills-patients">
+          <%= image_tag "users.svg", width: 28, class: "filter-white" %>
+          Patients
+        </a>
+      </li>
 
-        <div class="collapse show" id="data-collapse">
-          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          </ul>
-        </div>
+      <li class="nav-item">
+        <a href="#" class="nav-link" id="pills-donors-tab" data-toggle="pill" role="tab" aria-controls="pills-donors">
+          <%= image_tag "health.svg", width: 28, class: "filter-white" %>
+          Donors
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link" id="pills-products-tab" data-toggle="pill" role="tab" aria-controls="pills-products">
+          <%= image_tag "medical-kit.svg", width: 28, class: "filter-white" %>
+          Blood Products
+        </a>
       </li>
 
     </ul>
   </div>
 
   <div class="row">
-    <div class="btm_btns col border-end border-light py-3">
-      <%= link_to (image_tag "profile.svg", width: 36, class: "filter-white"), destroy_user_session_path, method: :delete %>
+    <div class="btm-btns col border-end border-light py-3">
+      <%= link_to (image_tag "profile.svg", width: 36, class: "filter-white"), edit_user_registration_path %>
     </div>
-    <div class="btm_btns col border-start border-light py-3">
-      <%= link_to (image_tag "logout.svg", width: 36, class: "filter-white"), edit_user_registration_path %>
+    <div class="btm-btns col border-light py-3">
+      <%= link_to (image_tag "logout.svg", width: 36, class: "filter-white"), destroy_user_session_path, method: :delete %>
     </div>
   </div>
 

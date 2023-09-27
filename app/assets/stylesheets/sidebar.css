@@ -1,3 +1,14 @@
+a,
+.nav-link {
+    text-decoration: none;
+    color: #F0F7F4;
+    align-items: center;
+}
+
+.navigation {
+    height: -webkit-fill-available;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -7,18 +18,32 @@
     height: -webkit-fill-available;
     max-height: 100vh;
     justify-content: space-between;
-  }
+}
 
-.sidebar a {
-    display: flex;
-    align-items:flex-end;
-    justify-content: space-around;
-    text-decoration: none;
+#root-anchor,
+.btm-btns {
     color: #F0F7F4;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
     font-size: 1.7em;
     font-weight: 600;
 }
 
 .filter-white {
     filter: invert(100%);
+}
+
+.nav-link {
+    margin-bottom: 0.5em;
+}
+.nav-link.active {
+    --bs-nav-pills-link-active-bg: #3066BE;
+}
+.nav-link img {
+    margin-right: 1em;
+}
+.nav {
+    --bs-nav-link-color: #F0F7F4;
+    --bs-nav-link-hover-color: #F0F7F4;
 }

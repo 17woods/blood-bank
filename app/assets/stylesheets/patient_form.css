@@ -1,0 +1,23 @@
+html,
+body {
+height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background-color: #F0F7F4;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  padding-top: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}

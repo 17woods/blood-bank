@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap'); </style>
+    <%= stylesheet_link_tag "data.css" %>
+  </head>
+  <body>
+
+<main class="d-flex flex-nowrap">
+
+  <div class="side-bar col">
+    <%= render "application/sidebar" %>
+  </div>
+
+  <div class="content col">
+
+<h1 class="fw-normal h2 my-4">Patient Data</h1>
+
+<table class="table-bordered table-responsive mb-4">
+  <tr>
+    <th>Name</th>
+    <th>Sex</th>
+    <th>Age</th>
+    <th>DoB</th>
+    <th>Height (cm)</th>
+    <th>Weight (kg)</th>
+    <th>ABO Group</th>
+    <th>RH Factor</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Active</th>
+    <th>Notes</th>
+    <th></th>
+  </tr>
+
+  <% @patients.each do |patient| %>
+    <tr>
+      <td><%= "#{patient.surname}, #{patient.name}" %></td>
+      <td><%= patient.sex %></td>
+      <td><%= patient.age %></td>
+      <td><%= patient.dob %></td>
+      <td><%= patient.height %></td>
+      <td><%= patient.weight %></td>
+      <td><%= patient.abo_group %></td>
+      <td><%= patient.rh_group %></td>
+      <td><%= patient.address %></td>
+      <td><%= patient.phone %></td>
+      <td><%= patient.email %></td>
+      <td class="text-center px-0">
+      <% if patient.active %>
+        &#x2713;
+      <% end %></td>
+      <td><%= patient.notes %></td>
+      <td><%= link_to "Access", patient %></td>
+    </tr>
+  <% end %>
+</table>
+
+<div class="button-container">
+  <%= link_to "Add new patient", new_patient_path, class: "btn btn-lg" %>
+</div>
+
+<p style="color: green"><%= notice %></p>
+
+  </div>
+
+</main>
+
+  </body>
+</html>
