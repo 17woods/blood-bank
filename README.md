@@ -3,7 +3,14 @@
 Login Screen (must signup first):
 ![alt text](https://github.com/17woods/blood-bank/blob/main/screenshots/login.png?raw=true)
 
+Index/Home Page where a user can access a patient, donor or blood product instance, or add one:
+![alt text](https://github.com/17woods/blood-bank/blob/main/screenshots/index.png?raw=true)
 
+New Patient Form Page:
+![alt text](https://github.com/17woods/blood-bank/blob/main/screenshots/new.png?raw=true)
+
+This is the page you see when you hit the "Access" button for an element in the database, where a user can choose to edit a patient, which would show a form identical to the new patient form with the existing fields filled in, or delete the element:
+![alt text](https://github.com/17woods/blood-bank/blob/main/screenshots/showpatient.png?raw=true)
 
 
 
