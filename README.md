@@ -1,5 +1,7 @@
 # README
 
+Technologies used: Ruby on Rails, Devise, Bootstrap
+
 Login Screen (must signup first):
 ![alt text](https://github.com/17woods/blood-bank/blob/main/screenshots/login.png?raw=true)
 
